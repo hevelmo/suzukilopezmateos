@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mustache JS Example</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h1>Rendering an HTML template through mustache.js from an AJAX GET request</h1>
+
+<div id="template-output"></div>
+<script>
+	$.ajax({
+        url : 'http://suzukigdl.medigraf.com.mx/services/templates/header_contents_models.html',
+        success : function(data){
+            main_menu_available = true;
+            html_sections_html = data.data;
+            if( preselected_click != null ){
+                $.openPanel( preselected_click[0], preselected_click[1] );
+                preselected_click = null;
+            }
+        }
+    });
+</script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="js/mustache.js"></script>
+<script src="js/main.js"></script>
+
+
+</body>
+</html>
