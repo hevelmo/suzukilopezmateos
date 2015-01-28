@@ -1,5 +1,8 @@
 ﻿
 @import url("../webfonts/suzuki-webfontkit/stylesheet.css");
+@import url("../webfonts/fontawesome/font-awesome.css");
+
+.hide{display:none!important}.show{display:block!important}
 
 body {
     font-family:"Lato";
@@ -244,6 +247,17 @@ fieldset .invalid-message {
     position:relative;
     display:none;
 }
+/*fieldset .invalid-message {
+    width:245px;
+    padding:7px 10px;
+    margin-top: -37px;
+    margin-left: 350px;
+    background-color: #e1251b;
+    color: #fff;
+    font-size: 14px;
+    position: absolute;
+    display:none;
+}*/
 fieldset .invalid-message span {
     position:absolute;
     top:-10px;
@@ -254,6 +268,16 @@ fieldset .invalid-message span {
     border-right:7px solid transparent;
     border-bottom:10px solid #e1251b;
 }
+/*fieldset .invalid-message span {
+    position: absolute;
+    top: 10px;
+    right: 200px;
+    width: 0;
+    height: 0;
+    border-bottom: 7px solid transparent;
+    border-top: 7px solid transparent;
+    border-right: 10px solid #e1251b;
+}*/
 .valid {
     color:#00872f;
 }
@@ -1940,7 +1964,10 @@ left: 155px;
 font-size: 18px;
 text-transform: uppercase;
 color: #fff;
-font-family: 'Suzuki-HeadlineRegular';display:inline-block;}#content-wrapper{padding-top:95px}
+font-family: 'Suzuki-HeadlineRegular';display:inline-block;}
+
+
+#content-wrapper{padding-top:95px}
 .header-wrapper {
     position:relative;
 }
@@ -3539,8 +3566,8 @@ font-family: 'Suzuki-HeadlineRegular';display:inline-block;}#content-wrapper{pad
         font-weight:200;
         font-size:20px;
         line-height:22px;
-        text-transform:uppercase
-   ; }
+        text-transform:uppercase;
+    }
     #header-prueba-manejo .test-drive-description, #header-financiamiento .test-drive-description {
         line-height:19px;
         margin:20px 0;
@@ -4427,6 +4454,15 @@ body {
     #footer-wrapper #footer-content .footer-row .footer-legals .last {
         padding:0 0 0 3px !important;
     }
+
+
+    #footer-wrapper #footer-content .footer-row .footer-copyright, #footer-wrapper #footer-content .footer-row .footer-legals {
+        text-align: center;
+        width: 100%;
+    }
+    #footer-wrapper #footer-content .footer-row .footer-copyright ul.links, #footer-wrapper #footer-content .footer-row .footer-legals ul.links {
+        margin-left: 12%;
+    }
 }
 @media (max-width: 959px) {
     #footer-wrapper #footer-content .footer-row {
@@ -4437,18 +4473,18 @@ body {
 }
 
 /* Valida sen-ajax */
-	#respuesta{
-	    position: relative;
-		float: left;
-		margin-top: -95px;
-		margin-left: 41%;
-	}
-	#respuesta2{
-		position: relative;
-		float: left;
-		margin-top: -100px;
-		margin-left: 41%;
-	}
+    #respuesta{
+        position: relative;
+        float: left;
+        margin-top: -95px;
+        margin-left: 41%;
+    }
+    #respuesta2{
+        position: relative;
+        float: left;
+        margin-top: -100px;
+        margin-left: 41%;
+    }
     #reply_contacto{
         position: relative;
         float: left;
@@ -4457,65 +4493,65 @@ body {
         top: 520px;
         left: -85px;
     }
-	aside.replyOk,
-	aside.replyError,
-	aside.replyCaution{
-		padding: 3px;
-		max-width: 100%;
-		font-size: 14px;
-	}
-	div.ico_Ok, p.msndialog, div.ico_Error, p.msndialog, div.ico_Caution, p.msndialog{
-		display: inline-block;
-		vertical-align: middle;
-	}
-	p.msndialog{
-		margin: 0 15px;
-	}
-	div.ico_Ok{
-		background: url(../../images/send-ajax-img/checkmark-circle.png) center center no-repeat;
-		-webkit-background-size: 16px 16px;
-		background-size: 16px 16px;
-		border-radius: 100%;
-		width: 26px;
-		height: 26px;
-	}
-	div.ico_Error{
-		background: url(../../images/send-ajax-img/cancel-circle.png) center center no-repeat;
-		-webkit-background-size: 16px 16px;
-		background-size: 16px 16px;
-		border-radius: 100%;
-		width: 26px;
-		height: 26px;
-	}
-	div.ico_Caution{
-		background: url(../../images/send-ajax-img/warning.png) center center no-repeat;
-		-webkit-background-size: 16px 16px;
-		background-size: 16px 16px;
-		border-radius: 100%;
-		width: 26px;
-		height: 26px;
-	}
-	aside.replyOk{
-		margin: 6px auto;
-		background: rgba(10, 155, 0, 0.1);
-		border-radius: 4px;
-		box-shadow: 0 0 2px rgba(0,0,0,0.4);
-		border: 1px solid rgba(255,255,255,0.9);
-	}
-	aside.replyError{
-		margin: 6px auto;
-		background: rgba(255, 0, 10, 0.1);
-		border-radius: 4px;
-		box-shadow: 0 0 2px rgba(0,0,0,0.4);
-		border: 1px solid rgba(255,255,255,0.9);
-	}
-	aside.replyCaution{
-		margin: 6px auto;
-		background: rgba(255, 255, 100, 0.3);
-		border-radius: 4px;
-		box-shadow: 0 0 2px rgba(0,0,0,0.4);
-		border: 1px solid rgba(255,255,255,0.9);
-	}
+    aside.replyOk,
+    aside.replyError,
+    aside.replyCaution{
+        padding: 3px;
+        max-width: 100%;
+        font-size: 14px;
+    }
+    div.ico_Ok, p.msndialog, div.ico_Error, p.msndialog, div.ico_Caution, p.msndialog{
+        display: inline-block;
+        vertical-align: middle;
+    }
+    p.msndialog{
+        margin: 0 15px;
+    }
+    div.ico_Ok{
+        background: url(../../images/send-ajax-img/checkmark-circle.png) center center no-repeat;
+        -webkit-background-size: 16px 16px;
+        background-size: 16px 16px;
+        border-radius: 100%;
+        width: 26px;
+        height: 26px;
+    }
+    div.ico_Error{
+        background: url(../../images/send-ajax-img/cancel-circle.png) center center no-repeat;
+        -webkit-background-size: 16px 16px;
+        background-size: 16px 16px;
+        border-radius: 100%;
+        width: 26px;
+        height: 26px;
+    }
+    div.ico_Caution{
+        background: url(../../images/send-ajax-img/warning.png) center center no-repeat;
+        -webkit-background-size: 16px 16px;
+        background-size: 16px 16px;
+        border-radius: 100%;
+        width: 26px;
+        height: 26px;
+    }
+    aside.replyOk{
+        margin: 6px auto;
+        background: rgba(10, 155, 0, 0.1);
+        border-radius: 4px;
+        box-shadow: 0 0 2px rgba(0,0,0,0.4);
+        border: 1px solid rgba(255,255,255,0.9);
+    }
+    aside.replyError{
+        margin: 6px auto;
+        background: rgba(255, 0, 10, 0.1);
+        border-radius: 4px;
+        box-shadow: 0 0 2px rgba(0,0,0,0.4);
+        border: 1px solid rgba(255,255,255,0.9);
+    }
+    aside.replyCaution{
+        margin: 6px auto;
+        background: rgba(255, 255, 100, 0.3);
+        border-radius: 4px;
+        box-shadow: 0 0 2px rgba(0,0,0,0.4);
+        border: 1px solid rgba(255,255,255,0.9);
+    }
 
 /*
 .content-responsive {
@@ -4538,3 +4574,70 @@ body {
     padding: 5px;
 }
 */
+
+#step-2-name,
+#step-2-lastname {text-transform:capitalize;}
+
+.new_promo_input {
+    background: transparent;
+    border: 1px solid #808080;
+    width: 288px;
+    max-width: 288px;
+    height: 39px;
+    display: block;
+    padding: 0px 10px;
+    margin: 0;
+    color: #808080;
+}
+.new_promo_input:focus {
+    color: #fff;
+    border: 1px solid #fff;
+    outline: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.new_promo_input_submit {
+    background: #e1251b;
+    width: 88px;
+    height: 34px;
+    color: #FFF;
+    border: 0;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+.new_promo_input_submit:focus {
+    background: #D75A54;
+    width: 88px;
+    height: 34px;
+    color: #FFF;
+    border: 0;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+@media only screen and (max-device-width: 767px) {
+    .confirm {
+        position: relative;
+        top: -31px;
+        left: 56px;
+    }
+    .form-resp {
+        margin: -54px auto 20px;
+    }
+    .new_promo_input {
+        background: rgba(255, 255, 255, 0.17);
+        width: 220px;
+        max-width: 220px;
+        height: 30px;
+        margin: 0px auto -5px;
+        padding: 0px 12px;
+    }
+    .new_promo_submit {
+        width: 68%;
+        margin: 0 auto;
+        display: block;
+        border-radius: none;
+    }
+}
